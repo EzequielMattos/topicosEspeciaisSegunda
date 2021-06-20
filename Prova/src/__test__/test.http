@@ -1,0 +1,30 @@
+###
+GET http://localhost:3000/medico/buscar/1234
+
+###
+GET http://localhost:3000/medico/remover/1234
+
+###
+GET http://localhost:3000/medico/listar
+
+###
+POST http://localhost:3000/medico/cadastrar 
+Content-Type: application/json
+
+{
+    "nome": "João",
+    "crm": "cala",
+    "especialidade": "coisa",
+    "criadoEm": "2021/01/01"
+}
+
+###
+POST http://localhost:3000/medico/alterar
+Content-Type: application/json
+
+{
+    "nome": "João",
+    "crm": "4567",
+    "especialidade": "coisa",
+    "criadoEm": "2021/01/01"
+}
