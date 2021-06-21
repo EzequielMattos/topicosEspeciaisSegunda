@@ -1,0 +1,25 @@
+<mat-card class="container">
+    <mat-card-header style="display: flex; flex-direction: column; align-items: center;">
+        <mat-card-title>Cadastrar Médico</mat-card-title>
+    </mat-card-header>
+
+    <form [formGroup]="form">
+        <mat-form-field class="example-full-width">
+            <input matInput  placeholder="Nome do Médico:" type="text" name="nomeMedico" [(ngModel)]="medico.nome" formControlName="nome" required>
+            <mat-error>O Campo NOME é Obrigatório</mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+            <input matInput  placeholder="CRM:" type="text" name="nomeMedico" [(ngModel)]="medico.crm" formControlName="crm" required>
+            <mat-error>O Campo CRM é Obrigatório</mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+            <input matInput  placeholder="Especialidade:" type="text" name="nomeMedico" [(ngModel)]="medico.especialidade" formControlName="especialidade" required>
+            <mat-error>O Campo ESPECIALIDADE é Obrigatório</mat-error>
+        </mat-form-field>
+
+        <button mat-raised-button color="primary" (click)="cadastrar()">Cadastrar</button>
+        <button mat-flat-button color="accent" routerLink="/medico/listar" style="margin-top: 12px;">Listar Médicos</button>
+    </form>
+</mat-card>
